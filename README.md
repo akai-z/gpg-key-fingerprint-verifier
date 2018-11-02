@@ -1,2 +1,1 @@
-GPG Key Fingerprint Verifier
-============================
+# GPG Key Fingerprint Verifier
