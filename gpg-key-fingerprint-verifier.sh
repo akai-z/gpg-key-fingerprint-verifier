@@ -12,3 +12,8 @@ gpg_version() {
       | cut -d " " -f 3 \
   )"
 }
+
+error() {
+  echo -e >&2 "\n$1\n"
+  exit 1
+}
