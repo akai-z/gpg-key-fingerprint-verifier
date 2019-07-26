@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -Eeuo pipefail
+set -e
 
 readonly VERSION_LABEL="gpg"
 readonly REQUIRED_DEPS=("gpg")
