@@ -3,7 +3,9 @@
 set -e
 
 readonly VERSION_LABEL="gpg"
-readonly REQUIRED_DEPS=("gpg")
+readonly REQUIRED_DEPS="
+gpg
+"
 
 gpg_version() {
   echo "$( \
