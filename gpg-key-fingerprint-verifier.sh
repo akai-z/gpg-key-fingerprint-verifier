@@ -5,6 +5,7 @@ set -e
 readonly GPGKEY_FINGERPRINT_LENGTH=40
 readonly GPGKEY_PUB_LABEL="pub:-:"
 readonly VERSION_LABEL="gpg"
+readonly GPG_DIR="/root/.gnupg"
 readonly REQUIRED_DEPS="
 gpg
 "
