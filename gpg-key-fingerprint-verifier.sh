@@ -10,6 +10,13 @@ readonly REQUIRED_DEPS="
 gpg
 "
 
+gpg_dir_create() {
+  if [ ! -d "$GPG_DIR" ]; then
+    mkdir "$GPG_DIR"
+    chmod 700 "$GPG_DIR"
+  fi
+}
+
 gpg_version() {
   echo "$( \
     gpg --version \
