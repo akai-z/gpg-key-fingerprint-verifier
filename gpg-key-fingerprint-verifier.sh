@@ -3,6 +3,7 @@
 set -e
 
 readonly GPGKEY_FINGERPRINT_LENGTH=40
+readonly GPGKEY_PUB_LABEL="pub:-:"
 readonly VERSION_LABEL="gpg"
 readonly REQUIRED_DEPS="
 gpg
