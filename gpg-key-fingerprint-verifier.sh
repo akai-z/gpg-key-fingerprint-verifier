@@ -2,6 +2,7 @@
 
 set -e
 
+readonly GPGKEY_FINGERPRINT_LENGTH=40
 readonly VERSION_LABEL="gpg"
 readonly REQUIRED_DEPS="
 gpg
