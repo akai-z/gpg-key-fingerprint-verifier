@@ -17,6 +17,12 @@ gpg_dir_create() {
   fi
 }
 
+gpgkeys_count() {
+  local gpgkey="$1"
+
+  echo "$gpgkey" | grep -c "^${GPGKEY_PUB_LABEL}"
+}
+
 gpg_version() {
   echo "$( \
     gpg --version \
