@@ -23,6 +23,13 @@ gpgkeys_count() {
   echo "$gpgkey" | grep -c "^${GPGKEY_PUB_LABEL}"
 }
 
+gpgkey_fingerprint_find() {
+  local gpgkey="$1"
+  local fingerprint="$2"
+
+  echo "$gpgkey" | grep -q "$fingerprint"
+}
+
 gpg_version() {
   echo "$( \
     gpg --version \
