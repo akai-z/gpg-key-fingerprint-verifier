@@ -10,6 +10,8 @@ readonly REQUIRED_DEPS="
 gpg
 "
 
+GPGKEY_FILE=""
+
 gpg_dir_create() {
   if [ ! -d "$GPG_DIR" ]; then
     mkdir "$GPG_DIR"
