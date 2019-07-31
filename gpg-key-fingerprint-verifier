@@ -51,6 +51,17 @@ deps_check() {
   done
 }
 
+read_args() {
+  local i
+
+  for i in "$@"
+  do
+    case $i in
+      --gpgkey-file=*)   GPGKEY_FILE="${i#*=}";;
+    esac
+  done
+}
+
 error() {
   echo -e >&2 "\n$1\n"
   exit 1
