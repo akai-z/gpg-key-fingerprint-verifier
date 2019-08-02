@@ -10,9 +10,9 @@ readonly REQUIRED_DEPS="
 gpg
 "
 
+GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
-GPGKEY_FILE=""
 
 gpg_dir_create() {
   if [ ! -d "$GPG_DIR" ]; then
