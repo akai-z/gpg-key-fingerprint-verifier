@@ -11,6 +11,7 @@ gpg
 "
 
 GPGKEY_FINGERPRINT=""
+GPG_SUBKEY_FINGERPRINT=""
 GPGKEY_FILE=""
 
 gpg_dir_create() {
