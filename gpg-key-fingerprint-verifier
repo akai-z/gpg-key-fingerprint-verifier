@@ -21,6 +21,27 @@ gpg_dir_create() {
   fi
 }
 
+gpgkey_verification() {
+  local gpgkey="$(gpgkey)"
+  local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
+
+  if [ "$gpgkeys_count" -ne 1 ]; then
+    exit 1 # Malicious key.
+  fi
+
+  if [ "${#GPGKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ] || \
+    [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ]
+  then
+    exit 1 # Invalid key fingerprint.
+  fi
+
+  gpgkey_fingerprint_find "$gpgkey" "$GPGKEY_FINGERPRINT" \
+    || exit 1 # Wrong/Malicious key.
+
+  gpgkey_fingerprint_find "$gpgkey" "$GPG_SUBKEY_FINGERPRINT" \
+    || exit 1 # Wrong/Malicious key.
+}
+
 gpgkey() {
   echo "$( \
     gpg -q \
