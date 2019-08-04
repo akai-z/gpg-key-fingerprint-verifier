@@ -98,6 +98,26 @@ read_args() {
   done
 }
 
+usage() {
+  cat <<Usage
+usage: gpg-key-fingerprint-verifier \\
+         --gpgkey-file=<gpgkey-file> \\
+         --gpgkey-fingerprint=<gpgkey-fingerprint> \\
+         --gpg-subkey-fingerprint=<gpg-subkey-fingerprint>
+
+  --gpgkey-file
+      GPG key file path.
+
+  --gpgkey-fingerprint
+      GPG key fingerprint.
+
+  --gpg-subkey-fingerprint
+      GPG subkey fingerprint.
+Usage
+
+  exit 0
+}
+
 error() {
   echo -e >&2 "\n$1\n"
   exit 1
