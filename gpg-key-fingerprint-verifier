@@ -88,12 +88,17 @@ deps_check() {
 read_args() {
   local i
 
+  if [ $# -eq 0 ]; then
+    usage
+  fi
+
   for i in "$@"
   do
     case $i in
       --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
+      *)                            usage;;
     esac
   done
 }
