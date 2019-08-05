@@ -85,6 +85,20 @@ deps_check() {
   done
 }
 
+args_validation() {
+  if [ -z "$GPGKEY_FILE" ]; then
+    error "GPG key file patch is missing."
+  fi
+
+  if [ -z "$GPGKEY_FINGERPRINT" ]; then
+    error "GPG key fingerprint is missing."
+  fi
+
+  if [ -z "$GPG_SUBKEY_FINGERPRINT" ]; then
+    error "GPG subkey fingerprint is missing."
+  fi
+}
+
 read_args() {
   local i
 
