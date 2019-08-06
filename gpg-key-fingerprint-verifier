@@ -149,3 +149,5 @@ main() {
   gpg_dir_create
   gpgkey_verification
 }
+
+main "$@"
