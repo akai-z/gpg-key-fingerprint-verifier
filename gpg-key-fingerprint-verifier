@@ -40,6 +40,8 @@ gpgkey_verification() {
 
   gpgkey_fingerprint_find "$gpgkey" "$GPG_SUBKEY_FINGERPRINT" \
     || exit 1 # Wrong/Malicious key.
+
+  exit 0
 }
 
 gpgkey() {
