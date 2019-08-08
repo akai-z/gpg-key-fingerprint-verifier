@@ -69,6 +69,10 @@ gpgkey_fingerprint_find() {
   echo "$gpgkey" | grep -q "$fingerprint"
 }
 
+gpg_major_version() {
+  echo "$(gpg_version | cut -d "." -f 1)"
+}
+
 gpg_version() {
   echo "$( \
     gpg --version \
