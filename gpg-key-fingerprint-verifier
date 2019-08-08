@@ -92,6 +92,14 @@ deps_check() {
   done
 }
 
+gpg_version_check() {
+  local gpg_version="$(gpg_major_version)"
+
+  if [ "$gpg_version" -lt "$REQUIRED_VERSION" ]
+    error "Only GPG v2 or higher are supported."
+  fi
+}
+
 args_validation() {
   if [ -z "$GPGKEY_FILE" ]; then
     error "GPG key file patch is missing."
