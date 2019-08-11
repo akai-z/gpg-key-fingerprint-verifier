@@ -16,10 +16,7 @@ GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 
 gpg_dir_create() {
-  if [ ! -d "$GPG_DIR" ]; then
-    mkdir "$GPG_DIR"
-    chmod 700 "$GPG_DIR"
-  fi
+  gpg -k > /dev/null 2>&1
 }
 
 gpgkey_verification() {
