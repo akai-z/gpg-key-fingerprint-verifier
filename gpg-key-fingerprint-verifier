@@ -14,7 +14,7 @@ GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 
-gpg_dir_create() {
+gpg_home_dir_create() {
   gpg -k > /dev/null 2>&1
 }
 
@@ -157,7 +157,7 @@ main() {
   gpg_version_check
   read_args "$@"
   args_validation
-  gpg_dir_create
+  gpg_home_dir_create
   gpgkey_verification
 }
 
