@@ -43,8 +43,7 @@ gpgkey_verification() {
 
 gpgkey() {
   echo "$( \
-    gpg -q \
-      --dry-run \
+    gpg -qn \
       --with-colons \
       --with-subkey-fingerprint \
       --import-options import-show \
