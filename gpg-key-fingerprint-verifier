@@ -97,7 +97,7 @@ gpg_version_check() {
 
 args_validation() {
   if [ -z "$GPGKEY_FILE" ]; then
-    error "GPG key file patch is missing."
+    error "GPG key file path is missing."
   fi
 
   if [ -z "$GPGKEY_FINGERPRINT" ]; then
