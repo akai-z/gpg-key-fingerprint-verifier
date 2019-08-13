@@ -14,10 +14,6 @@ GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 
-gpg_home_dir_create() {
-  gpg -k > /dev/null 2>&1
-}
-
 gpgkey_verification() {
   local gpgkey="$(gpgkey)"
   local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
@@ -62,6 +58,10 @@ gpgkey_fingerprint_find() {
   local fingerprint="$2"
 
   echo "$gpgkey" | grep -q "$fingerprint"
+}
+
+gpg_home_dir_create() {
+  gpg -k > /dev/null 2>&1
 }
 
 gpg_major_version() {
