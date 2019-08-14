@@ -1,1 +1,1 @@
-# GPG Key Fingerprint Verifier
+# GnuPG Key Fingerprint Verifier
