@@ -1,5 +1,9 @@
 # GnuPG Key Fingerprint Verifier
 
+## Requirements
+
+* GnuPG (Version 2 or higher.)
+
 ## File Integrity Verification
 
 To verify file (gpg-key-fingerprint-verifier) integrity, you will need a tool that can calculate `SHA-3-512` hash.
