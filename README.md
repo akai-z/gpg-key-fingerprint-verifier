@@ -4,6 +4,31 @@
 
 * GnuPG (Version 2 or higher.)
 
+## Installation
+
+Download using `curl`:
+```
+curl -fL -O https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier
+```
+
+Or by using `wget`:
+```
+wget https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier
+```
+
+Optionally, you could verify file integrity before using it. (Recommended)  
+Check [file integrity verification](#file-integrity-verification) section for more details.
+
+Make the tool executable:
+```
+chmod +x gpg-key-fingerprint-verifier
+```
+
+Make the tool globally accessible:
+```
+sudo mv gpg-key-fingerprint-verifier /usr/local/bin/
+```
+
 ## File Integrity Verification
 
 To verify file (gpg-key-fingerprint-verifier) integrity, you will need a tool that can calculate `SHA-3-512` hash.
