@@ -149,6 +149,14 @@ Usage
   exit 0
 }
 
+verification_success() {
+  if [ "$QUIET" -ne 1 ]; then
+    echo -e "\nValid GPG key.\n"
+  fi
+
+  exit 0
+}
+
 verification_result_error() {
   error "Invalid GPG key." $QUIET
 }
