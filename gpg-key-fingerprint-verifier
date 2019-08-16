@@ -13,6 +13,7 @@ gpg
 GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
+QUIET=0
 
 gpgkey_verification() {
   local gpgkey="$(gpgkey)"
