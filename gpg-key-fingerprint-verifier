@@ -134,7 +134,8 @@ usage() {
 usage: gpg-key-fingerprint-verifier \\
          --gpgkey-file=<gpgkey-file> \\
          --gpgkey-fingerprint=<gpgkey-fingerprint> \\
-         --gpg-subkey-fingerprint=<gpg-subkey-fingerprint>
+         --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
+         [-q|--quiet]
 
   --gpgkey-file
       GPG key file path.
@@ -144,6 +145,9 @@ usage: gpg-key-fingerprint-verifier \\
 
   --gpg-subkey-fingerprint
       GPG subkey fingerprint.
+
+  -q, --quiet
+      Suppresses verification result message.
 Usage
 
   exit 0
