@@ -149,6 +149,10 @@ Usage
   exit 0
 }
 
+verification_result_error() {
+  error "Invalid GPG key." $QUIET
+}
+
 error() {
   local suppress_message="$2"
 
