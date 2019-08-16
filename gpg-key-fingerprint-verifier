@@ -150,7 +150,12 @@ Usage
 }
 
 error() {
-  echo -e >&2 "\n$1\n"
+  local suppress_message="$2"
+
+  if [ -z "$suppress_message" ] || [ "$suppress_message" -ne 1 ]; then
+    echo -e >&2 "\n$1\n"
+  fi
+
   exit 1
 }
 
