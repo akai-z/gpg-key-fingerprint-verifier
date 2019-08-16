@@ -123,6 +123,7 @@ read_args() {
       --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
+      -q|--quiet)                   QUIET=1;;
       *)                            usage;;
     esac
   done
