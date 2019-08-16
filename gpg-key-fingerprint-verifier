@@ -20,20 +20,20 @@ gpgkey_verification() {
   local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
 
   if [ "$gpgkeys_count" -ne 1 ]; then
-    exit 1 # Malicious key.
+    verification_result_error # Malicious key.
   fi
 
   if [ "${#GPGKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ] || \
     [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ]
   then
-    exit 1 # Invalid key fingerprint.
+    verification_result_error # Invalid key fingerprint.
   fi
 
   gpgkey_fingerprint_find "$gpgkey" "$GPGKEY_FINGERPRINT" \
-    || exit 1 # Wrong/Malicious key.
+    || verification_result_error # Wrong/Malicious key.
 
   gpgkey_fingerprint_find "$gpgkey" "$GPG_SUBKEY_FINGERPRINT" \
-    || exit 1 # Wrong/Malicious key.
+    || verification_result_error # Wrong/Malicious key.
 
   exit 0
 }
