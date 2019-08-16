@@ -58,7 +58,8 @@ you have to compare it with the hash provided by this repository ([gpg-key-finge
 gpg-key-fingerprint-verifier \
   --gpgkey-file=<gpgkey-file> \
   --gpgkey-fingerprint=<gpgkey-fingerprint> \
-  --gpg-subkey-fingerprint=<gpg-subkey-fingerprint>
+  --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
+  [-q|--quiet]
 ```
 
 * `--gpgkey-file`: GPG key file path.
@@ -66,6 +67,8 @@ gpg-key-fingerprint-verifier \
 * `--gpgkey-fingerprint`: GPG key fingerprint.
 
 * `--gpg-subkey-fingerprint`: GPG subkey fingerprint.
+
+* `-q, --quiet`: Suppresses verification result message.
 
 ## Authors
 
