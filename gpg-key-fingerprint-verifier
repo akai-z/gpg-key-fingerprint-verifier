@@ -201,6 +201,7 @@ main() {
   read_args "$@"
   args_validation
   gpg_home_dir_create
+  gpgkeys_print
   gpgkey_verification
 }
 
