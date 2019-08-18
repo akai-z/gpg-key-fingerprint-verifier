@@ -13,7 +13,7 @@ gpg
 GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
-PRINT_GPG_KEYS=0
+GPG_KEYS_PRINT=0
 QUIET=0
 
 gpgkey_verification() {
@@ -124,7 +124,7 @@ read_args() {
       --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
-      --print-gpg-keys)             PRINT_GPG_KEYS=1;;
+      --print-gpg-keys)             GPG_KEYS_PRINT=1;;
       -q|--quiet)                   QUIET=1;;
       *)                            usage;;
     esac
