@@ -73,6 +73,13 @@ gpg_home_dir_create() {
   gpg -k > /dev/null 2>&1
 }
 
+gpgkeys_print() {
+  if [ "$GPG_KEYS_PRINT" -eq 1 ]; then
+    gpgkey 0
+    exit 0
+  fi
+}
+
 gpg_major_version() {
   echo "$(gpg_version | cut -d "." -f 1)"
 }
