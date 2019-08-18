@@ -102,6 +102,10 @@ args_validation() {
     error "GPG key file path is missing."
   fi
 
+  if [ "$GPG_KEYS_PRINT" -eq 1 ]; then
+    return 0
+  fi
+
   if [ -z "$GPGKEY_FINGERPRINT" ]; then
     error "GPG key fingerprint is missing."
   fi
