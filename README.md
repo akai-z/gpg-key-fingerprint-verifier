@@ -59,6 +59,7 @@ gpg-key-fingerprint-verifier \
   --gpgkey-file=<gpgkey-file> \
   --gpgkey-fingerprint=<gpgkey-fingerprint> \
   --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
+  [--print-gpg-keys=<print-gpg-keys>] \
   [-q|--quiet]
 ```
 
@@ -67,6 +68,8 @@ gpg-key-fingerprint-verifier \
 * `--gpgkey-fingerprint`: GPG key fingerprint.
 
 * `--gpg-subkey-fingerprint`: GPG subkey fingerprint.
+
+* `--print-gpg-keys`: Prints GPG keys of the provided GPG file.
 
 * `-q, --quiet`: Suppresses verification result message.
 
