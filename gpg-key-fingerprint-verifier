@@ -155,7 +155,7 @@ usage: gpg-key-fingerprint-verifier \\
          --gpgkey-file=<gpgkey-file> \\
          --gpgkey-fingerprint=<gpgkey-fingerprint> \\
          --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
-         [--print-gpg-keys=<print-gpg-keys>] \\
+         [--print-gpg-key=<print-gpg-key>] \\
          [-q|--quiet]
 
   --gpgkey-file
@@ -167,8 +167,8 @@ usage: gpg-key-fingerprint-verifier \\
   --gpg-subkey-fingerprint
       GPG subkey fingerprint.
 
-  --print-gpg-keys
-      Prints GPG keys of the provided GPG file.
+  --print-gpg-key
+      Prints GPG key of the provided GPG file.
 
   -q, --quiet
       Suppresses verification result message.
