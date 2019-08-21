@@ -13,7 +13,7 @@ gpg
 GPGKEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
-GPG_KEYS_PRINT=0
+GPG_KEY_PRINT=0
 QUIET=0
 
 gpgkey_verification() {
@@ -74,7 +74,7 @@ gpg_home_dir_create() {
 }
 
 gpgkeys_print() {
-  if [ "$GPG_KEYS_PRINT" -eq 1 ]; then
+  if [ "$GPG_KEY_PRINT" -eq 1 ]; then
     gpgkey 0
     exit 0
   fi
@@ -116,7 +116,7 @@ args_validation() {
     error "GPG key file path is missing."
   fi
 
-  if [ "$GPG_KEYS_PRINT" -eq 1 ]; then
+  if [ "$GPG_KEY_PRINT" -eq 1 ]; then
     return 0
   fi
 
@@ -142,7 +142,7 @@ read_args() {
       --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
-      --print-gpg-keys)             GPG_KEYS_PRINT=1;;
+      --print-gpg-keys)             GPG_KEY_PRINT=1;;
       -q|--quiet)                   QUIET=1;;
       *)                            usage;;
     esac
