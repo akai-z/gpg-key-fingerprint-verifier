@@ -142,7 +142,7 @@ read_args() {
       --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
-      --print-gpg-keys)             GPG_KEY_PRINT=1;;
+      --print-gpg-key)              GPG_KEY_PRINT=1;;
       -q|--quiet)                   QUIET=1;;
       *)                            usage;;
     esac
