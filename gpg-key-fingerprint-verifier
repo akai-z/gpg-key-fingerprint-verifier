@@ -186,7 +186,7 @@ verification_success() {
 }
 
 verification_result_error() {
-  error "Invalid GPG key." $QUIET
+  error "Invalid GPG key."
 }
 
 error() {
