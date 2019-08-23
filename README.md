@@ -71,7 +71,7 @@ gpg-key-fingerprint-verifier \
 
 * `--print-gpg-key`: Prints GPG key of the provided GPG file.
 
-* `-q, --quiet`: Suppresses verification result message.
+* `-q, --quiet`: Suppresses verification success message.
 
 ## Authors
 
