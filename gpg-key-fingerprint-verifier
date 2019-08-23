@@ -171,7 +171,7 @@ usage: gpg-key-fingerprint-verifier \\
       Prints GPG key of the provided GPG file.
 
   -q, --quiet
-      Suppresses verification result message.
+      Suppresses verification success message.
 Usage
 
   exit 0
