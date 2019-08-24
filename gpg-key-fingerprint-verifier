@@ -40,16 +40,11 @@ gpgkey_verification() {
 }
 
 gpgkey() {
-  local with_colons="$1"
-  local colons="--with-colons"
-
-  if [ ! -z "$with_colons" ] && [ "$with_colons" -eq 0 ]; then
-    colons=""
-  fi
+  local additional_args=""
 
   echo "$( \
     gpg -qn \
-      $colons \
+      $additional_args \
       --with-subkey-fingerprint \
       --import-options import-show \
       --import "$GPGKEY_FILE" \
