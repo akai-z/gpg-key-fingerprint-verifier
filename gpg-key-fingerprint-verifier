@@ -17,7 +17,7 @@ GPG_KEY_PRINT=0
 QUIET=0
 
 gpgkey_verification() {
-  local gpgkey="$(gpgkey)"
+  local gpgkey="$(gpgkey "--with-colons")"
   local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
 
   if [ "$gpgkeys_count" -ne 1 ]; then
