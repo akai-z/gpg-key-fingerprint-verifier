@@ -40,7 +40,7 @@ gpgkey_verification() {
 }
 
 gpgkey() {
-  local additional_args=""
+  local additional_args="$1"
 
   echo "$( \
     gpg -qn \
