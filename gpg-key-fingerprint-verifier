@@ -70,7 +70,7 @@ gpg_home_dir_create() {
 
 gpgkey_print() {
   if [ "$GPG_KEY_PRINT" -eq 1 ]; then
-    gpgkey 0
+    gpgkey
     exit 0
   fi
 }
