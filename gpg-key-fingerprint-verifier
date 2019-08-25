@@ -21,7 +21,7 @@ gpgkey_verification() {
   local gpgkey="$(gpgkey "--with-colons")"
   local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
 
-  if [ "$gpgkeys_count" -ne 1 ]; then
+  if [ "$gpgkeys_count" -ne "$GPGKEY_FILE_MAX_KEYS" ]; then
     verification_result_error # Malicious key.
   fi
 
