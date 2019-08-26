@@ -65,13 +65,13 @@ gpg-key-fingerprint-verifier \
 
 * `--gpgkey-file`: GPG key file path.
 
-* `--gpgkey-fingerprint`: GPG key fingerprint.
+* `--gpgkey-fingerprint`: GPG key fingerprint. (Not used/required if `--print-gpg-key` is used.)
 
-* `--gpg-subkey-fingerprint`: GPG subkey fingerprint.
+* `--gpg-subkey-fingerprint`: GPG subkey fingerprint. (Not used/required if `--print-gpg-key` is used.)
 
-* `--print-gpg-key`: Prints GPG key of the provided GPG file.
+* `--print-gpg-key`: Prints GPG key of the provided GPG file. (Optional)
 
-* `-q, --quiet`: Suppresses verification success message.
+* `-q, --quiet`: Suppresses verification success message. (Optional)
 
 ## Authors
 
