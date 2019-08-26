@@ -158,16 +158,16 @@ usage: gpg-key-fingerprint-verifier \\
       GPG key file path.
 
   --gpgkey-fingerprint
-      GPG key fingerprint.
+      GPG key fingerprint. (Not used/required if --print-gpg-key is used.)
 
   --gpg-subkey-fingerprint
-      GPG subkey fingerprint.
+      GPG subkey fingerprint. (Not used/required if --print-gpg-key is used.)
 
   --print-gpg-key
-      Prints GPG key of the provided GPG file.
+      Prints GPG key of the provided GPG file. (Optional)
 
   -q, --quiet
-      Suppresses verification success message.
+      Suppresses verification success message. (Optional)
 Usage
 
   exit 0
