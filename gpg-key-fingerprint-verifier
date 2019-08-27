@@ -12,7 +12,7 @@ gpg
 "
 
 GPG_KEY_FILE=""
-GPGKEY_FINGERPRINT=""
+GPG_KEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 GPG_KEY_PRINT=0
 QUIET=0
@@ -25,13 +25,13 @@ gpgkey_verification() {
     verification_result_error # Malicious key.
   fi
 
-  if [ "${#GPGKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ] || \
+  if [ "${#GPG_KEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ] || \
     [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ]
   then
     verification_result_error # Invalid key fingerprint.
   fi
 
-  gpgkey_fingerprint_find "$gpgkey" "$GPGKEY_FINGERPRINT" \
+  gpgkey_fingerprint_find "$gpgkey" "$GPG_KEY_FINGERPRINT" \
     || verification_result_error # Wrong/Malicious key.
 
   gpgkey_fingerprint_find "$gpgkey" "$GPG_SUBKEY_FINGERPRINT" \
@@ -116,7 +116,7 @@ args_validation() {
     return 0
   fi
 
-  if [ -z "$GPGKEY_FINGERPRINT" ]; then
+  if [ -z "$GPG_KEY_FINGERPRINT" ]; then
     error "GPG key fingerprint is missing."
   fi
 
@@ -136,7 +136,7 @@ read_args() {
   do
     case $i in
       --gpgkey-file=*)              GPG_KEY_FILE="${i#*=}";;
-      --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
+      --gpgkey-fingerprint=*)       GPG_KEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
       --print-gpg-key)              GPG_KEY_PRINT=1;;
       -q|--quiet)                   QUIET=1;;
