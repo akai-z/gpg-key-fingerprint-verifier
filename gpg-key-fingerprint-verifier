@@ -11,7 +11,7 @@ readonly REQUIRED_DEPS="
 gpg
 "
 
-GPGKEY_FILE=""
+GPG_KEY_FILE=""
 GPGKEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 GPG_KEY_PRINT=0
@@ -48,7 +48,7 @@ gpgkey() {
       $additional_args \
       --with-subkey-fingerprint \
       --import-options import-show \
-      --import "$GPGKEY_FILE" \
+      --import "$GPG_KEY_FILE" \
   )"
 }
 
@@ -108,7 +108,7 @@ gpg_version_check() {
 }
 
 args_validation() {
-  if [ -z "$GPGKEY_FILE" ]; then
+  if [ -z "$GPG_KEY_FILE" ]; then
     error "GPG key file path is missing."
   fi
 
@@ -135,7 +135,7 @@ read_args() {
   for i in "$@"
   do
     case $i in
-      --gpgkey-file=*)              GPGKEY_FILE="${i#*=}";;
+      --gpgkey-file=*)              GPG_KEY_FILE="${i#*=}";;
       --gpgkey-fingerprint=*)       GPGKEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
       --print-gpg-key)              GPG_KEY_PRINT=1;;
