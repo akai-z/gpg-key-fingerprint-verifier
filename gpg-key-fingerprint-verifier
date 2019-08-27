@@ -2,7 +2,7 @@
 
 set -e
 
-readonly GPGKEY_FINGERPRINT_LENGTH=40
+readonly GPG_KEY_FINGERPRINT_LENGTH=40
 readonly GPGKEY_PUB_LABEL="pub:-:"
 readonly VERSION_LABEL="gpg"
 readonly REQUIRED_VERSION="2"
@@ -25,8 +25,8 @@ gpgkey_verification() {
     verification_result_error # Malicious key.
   fi
 
-  if [ "${#GPGKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ] || \
-    [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPGKEY_FINGERPRINT_LENGTH" ]
+  if [ "${#GPGKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ] || \
+    [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ]
   then
     verification_result_error # Invalid key fingerprint.
   fi
