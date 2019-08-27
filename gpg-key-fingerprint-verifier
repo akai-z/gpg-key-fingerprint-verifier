@@ -6,7 +6,7 @@ readonly GPG_KEY_FINGERPRINT_LENGTH=40
 readonly GPG_KEY_PUB_LABEL="pub:-:"
 readonly VERSION_LABEL="gpg"
 readonly REQUIRED_VERSION="2"
-readonly GPGKEY_FILE_MAX_KEYS=1
+readonly GPG_KEY_FILE_MAX_KEYS=1
 readonly REQUIRED_DEPS="
 gpg
 "
@@ -21,7 +21,7 @@ gpgkey_verification() {
   local gpgkey="$(gpgkey "--with-colons")"
   local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
 
-  if [ "$gpgkeys_count" -ne "$GPGKEY_FILE_MAX_KEYS" ]; then
+  if [ "$gpgkeys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
     verification_result_error # Malicious key.
   fi
 
