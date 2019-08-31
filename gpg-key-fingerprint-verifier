@@ -18,10 +18,10 @@ GPG_KEY_PRINT=0
 QUIET=0
 
 gpgkey_verification() {
-  local gpgkey="$(gpgkey "--with-colons")"
-  local gpgkeys_count="$(gpgkeys_count "$gpgkey")"
+  local gpg_key="$(gpgkey "--with-colons")"
+  local gpg_keys_count="$(gpgkeys_count "$gpg_key")"
 
-  if [ "$gpgkeys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
+  if [ "$gpg_keys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
     verification_result_error # Malicious key.
   fi
 
@@ -31,10 +31,10 @@ gpgkey_verification() {
     verification_result_error # Invalid key fingerprint.
   fi
 
-  gpgkey_fingerprint_find "$gpgkey" "$GPG_KEY_FINGERPRINT" \
+  gpgkey_fingerprint_find "$gpg_key" "$GPG_KEY_FINGERPRINT" \
     || verification_result_error # Wrong/Malicious key.
 
-  gpgkey_fingerprint_find "$gpgkey" "$GPG_SUBKEY_FINGERPRINT" \
+  gpgkey_fingerprint_find "$gpg_key" "$GPG_SUBKEY_FINGERPRINT" \
     || verification_result_error # Wrong/Malicious key.
 
   verification_success
