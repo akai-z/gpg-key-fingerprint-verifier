@@ -17,7 +17,7 @@ GPG_SUBKEY_FINGERPRINT=""
 GPG_KEY_PRINT=0
 QUIET=0
 
-gpgkey_verification() {
+gpg_key_verification() {
   local gpg_key="$(gpgkey "--with-colons")"
   local gpg_keys_count="$(gpgkeys_count "$gpg_key")"
 
@@ -197,7 +197,7 @@ main() {
   args_validation
   gpg_home_dir_create
   gpgkey_print
-  gpgkey_verification
+  gpg_key_verification
 }
 
 main "$@"
