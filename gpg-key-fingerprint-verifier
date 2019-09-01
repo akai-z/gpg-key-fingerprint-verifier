@@ -59,10 +59,10 @@ gpgkeys_count() {
 }
 
 gpgkey_fingerprint_find() {
-  local gpgkey="$1"
+  local gpg_key="$1"
   local fingerprint="$2"
 
-  echo "$gpgkey" | grep -q "$fingerprint"
+  echo "$gpg_key" | grep -q "$fingerprint"
 }
 
 gpg_home_dir_create() {
