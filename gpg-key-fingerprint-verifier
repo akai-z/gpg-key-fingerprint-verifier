@@ -19,7 +19,7 @@ QUIET=0
 
 gpg_key_verification() {
   local gpg_key="$(gpg_key "--with-colons")"
-  local gpg_keys_count="$(gpgkeys_count "$gpg_key")"
+  local gpg_keys_count="$(gpg_keys_count "$gpg_key")"
 
   if [ "$gpg_keys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
     verification_result_error # Malicious key.
@@ -52,7 +52,7 @@ gpg_key() {
   )"
 }
 
-gpgkeys_count() {
+gpg_keys_count() {
   local gpg_key="$1"
 
   echo "$gpg_key" | grep -c "^${GPG_KEY_PUB_LABEL}"
