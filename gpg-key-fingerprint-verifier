@@ -53,9 +53,9 @@ gpgkey() {
 }
 
 gpgkeys_count() {
-  local gpgkey="$1"
+  local gpg_key="$1"
 
-  echo "$gpgkey" | grep -c "^${GPG_KEY_PUB_LABEL}"
+  echo "$gpg_key" | grep -c "^${GPG_KEY_PUB_LABEL}"
 }
 
 gpgkey_fingerprint_find() {
