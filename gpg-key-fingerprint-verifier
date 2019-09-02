@@ -5,7 +5,7 @@ set -e
 readonly GPG_REQUIRED_VERSION=2
 readonly GPG_KEY_FILE_MAX_KEYS=1
 readonly GPG_KEY_FINGERPRINT_LENGTH=40
-readonly GPG_KEY_PUB_LABEL="pub:-:"
+readonly GPG_KEY_LISTING_PUBLIC_KEY_FIELD="pub:-:"
 readonly GPG_VERSION_LABEL="gpg"
 readonly REQUIRED_DEPS="
 gpg
@@ -55,7 +55,7 @@ gpg_key() {
 gpg_keys_count() {
   local gpg_key="$1"
 
-  echo "$gpg_key" | grep -c "^${GPG_KEY_PUB_LABEL}"
+  echo "$gpg_key" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_FIELD}"
 }
 
 gpg_key_fingerprint_find() {
