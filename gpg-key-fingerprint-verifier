@@ -18,7 +18,7 @@ GPG_KEY_PRINT=0
 QUIET=0
 
 gpg_key_verification() {
-  local gpg_key="$(gpg_key "--with-colons")"
+  local gpg_key="$(gpg_key_list "--with-colons")"
   local gpg_keys_count="$(gpg_keys_count "$gpg_key")"
 
   if [ "$gpg_keys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
@@ -40,7 +40,7 @@ gpg_key_verification() {
   verification_success
 }
 
-gpg_key() {
+gpg_key_list() {
   local additional_args="$1"
 
   echo "$( \
@@ -71,7 +71,7 @@ gpg_home_dir_create() {
 
 gpg_key_print() {
   if [ "$GPG_KEY_PRINT" -eq 1 ]; then
-    gpg_key
+    gpg_key_list
     exit 0
   fi
 }
