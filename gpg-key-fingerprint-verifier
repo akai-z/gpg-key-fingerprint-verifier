@@ -158,10 +158,10 @@ usage: gpg-key-fingerprint-verifier \\
       GPG key file path.
 
   --gpg-key-fingerprint
-      GPG key fingerprint. (Not used/required if --print-gpg-key is used.)
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG key fingerprint. (Not used/required if --print-gpg-key is used.)
 
   --gpg-subkey-fingerprint
-      GPG subkey fingerprint. (Not used/required if --print-gpg-key is used.)
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint. (Not used/required if --print-gpg-key is used.)
 
   --print-gpg-key
       Prints GPG key of the provided GPG file. (Optional)
