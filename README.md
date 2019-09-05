@@ -63,7 +63,7 @@ gpg-key-fingerprint-verifier \
   [-q|--quiet]
 ```
 
-* `--gpg-key-file`: GPG key file path.
+* `--gpg-key-file`: GPG key import file path.
 
 * `--gpg-key-fingerprint`: A 40 characters, with no spaces, GPG key fingerprint. (Not used/required if `--print-gpg-key` is used.)
 
