@@ -155,7 +155,7 @@ usage: gpg-key-fingerprint-verifier \\
          [-q|--quiet]
 
   --gpg-key-file
-      GPG key file path.
+      GPG key import file path.
 
   --gpg-key-fingerprint
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG key fingerprint. (Not used/required if --print-gpg-key is used.)
