@@ -109,7 +109,7 @@ gpg_version_check() {
 
 args_validation() {
   if [ -z "$GPG_KEY_FILE" ]; then
-    error "GPG key file path is missing."
+    error "GPG key import file path is missing."
   fi
 
   if [ "$GPG_KEY_PRINT" -eq 1 ]; then
