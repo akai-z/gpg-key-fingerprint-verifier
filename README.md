@@ -65,9 +65,11 @@ gpg-key-fingerprint-verifier \
 
 * `--gpg-key-file`: GPG key import file path.
 
-* `--gpg-key-fingerprint`: A 40 characters, with no spaces, GPG key fingerprint. (Not used/required if `--print-gpg-key` is used.)
+* `--gpg-key-fingerprint`: A 40 characters, with no spaces, GPG key fingerprint.  
+  (Not used/required if `--print-gpg-key` is used.)
 
-* `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint. (Not used/required if `--print-gpg-key` is used.)
+* `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
+  (Not used/required if `--print-gpg-key` is used.)
 
 * `--print-gpg-key`: Prints GPG key of the provided GPG key import file. (Optional)
 
