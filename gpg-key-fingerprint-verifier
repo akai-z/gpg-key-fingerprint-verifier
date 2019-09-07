@@ -18,7 +18,7 @@ GPG_KEY_PRINT=0
 QUIET=0
 
 gpg_key_verification() {
-  local gpg_key="$(gpg_key_list "--with-colons")"
+  local gpg_key="$(gpg_key_list)"
   local gpg_keys_count="$(gpg_keys_count "$gpg_key")"
 
   if [ "$gpg_keys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
