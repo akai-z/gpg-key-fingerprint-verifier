@@ -41,11 +41,8 @@ gpg_key_verification() {
 }
 
 gpg_key_list() {
-  local additional_args="$1"
-
   echo "$( \
     gpg -qn \
-      $additional_args \
       --with-subkey-fingerprint \
       --import-options import-show \
       --import "$GPG_KEY_FILE" \
