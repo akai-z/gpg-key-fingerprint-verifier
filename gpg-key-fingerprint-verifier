@@ -162,7 +162,7 @@ usage: gpg-key-fingerprint-verifier \\
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint. (Not used/required if --print-gpg-key is used.)
 
   --print-gpg-key
-      Prints GPG key of the provided GPG key import file. (Optional)
+      Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
 
   -q, --quiet
       Suppresses verification success message. (Optional)
