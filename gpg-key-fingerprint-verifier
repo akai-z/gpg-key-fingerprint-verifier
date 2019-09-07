@@ -43,6 +43,7 @@ gpg_key_verification() {
 gpg_key_list() {
   echo "$( \
     gpg -qn \
+      --with-colons \
       --with-subkey-fingerprint \
       --import-options import-show \
       --import "$GPG_KEY_FILE" \
