@@ -67,7 +67,7 @@ gpg_home_dir_create() {
   gpg -k > /dev/null 2>&1
 }
 
-gpg_key_print() {
+gpg_key_list_print() {
   if [ "$GPG_KEY_LIST_PRINT" -eq 1 ]; then
     gpg_key_list
     exit 0
@@ -194,7 +194,7 @@ main() {
   read_args "$@"
   args_validation
   gpg_home_dir_create
-  gpg_key_print
+  gpg_key_list_print
   gpg_key_verification
 }
 
