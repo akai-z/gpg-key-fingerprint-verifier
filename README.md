@@ -59,19 +59,19 @@ gpg-key-fingerprint-verifier \
   --gpg-key-file=<gpg-key-file> \
   --gpg-key-fingerprint=<gpg-key-fingerprint> \
   --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
-  [--print-gpg-key=<print-gpg-key>] \
+  [--print-gpg-key-list=<print-gpg-key>] \
   [-q|--quiet]
 ```
 
 * `--gpg-key-file`: GPG key import file path.
 
 * `--gpg-key-fingerprint`: A 40 characters, with no spaces, GPG key fingerprint.  
-  (Not used/required if `--print-gpg-key` is used.)
+  (Not used/required if `--print-gpg-key-list` is used.)
 
 * `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
-  (Not used/required if `--print-gpg-key` is used.)
+  (Not used/required if `--print-gpg-key-list` is used.)
 
-* `--print-gpg-key`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
+* `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
 
 * `-q, --quiet`: Suppresses verification success message. (Optional)
 
