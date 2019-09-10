@@ -149,7 +149,7 @@ usage: gpg-key-fingerprint-verifier \\
          --gpg-key-file=<gpg-key-file> \\
          --gpg-key-fingerprint=<gpg-key-fingerprint> \\
          --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
-         [--print-gpg-key-list=<print-gpg-key>] \\
+         [--print-gpg-key-list] \\
          [-q|--quiet]
 
   --gpg-key-file
