@@ -11,7 +11,7 @@ readonly REQUIRED_DEPS="
 gpg
 "
 
-GPG_KEY_FILE=""
+GPG_KEY_IMPORT_FILE=""
 GPG_KEY_FINGERPRINT=""
 GPG_SUBKEY_FINGERPRINT=""
 GPG_KEY_LIST_PRINT=0
@@ -46,7 +46,7 @@ gpg_key_list() {
       --with-colons \
       --with-subkey-fingerprint \
       --import-options import-show \
-      --import "$GPG_KEY_FILE" \
+      --import "$GPG_KEY_IMPORT_FILE" \
   )"
 }
 
@@ -106,7 +106,7 @@ gpg_version_check() {
 }
 
 args_validation() {
-  if [ -z "$GPG_KEY_FILE" ]; then
+  if [ -z "$GPG_KEY_IMPORT_FILE" ]; then
     error "GPG key import file path is missing."
   fi
 
@@ -133,7 +133,7 @@ read_args() {
   for i in "$@"
   do
     case $i in
-      --gpg-key-file=*)             GPG_KEY_FILE="${i#*=}";;
+      --gpg-key-file=*)             GPG_KEY_IMPORT_FILE="${i#*=}";;
       --gpg-key-fingerprint=*)      GPG_KEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
       --print-gpg-key-list)         GPG_KEY_LIST_PRINT=1;;
