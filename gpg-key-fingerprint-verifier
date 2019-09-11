@@ -3,7 +3,7 @@
 set -e
 
 readonly GPG_REQUIRED_VERSION=2
-readonly GPG_KEY_FILE_MAX_KEYS=1
+readonly GPG_KEY_IMPORT_FILE_MAX_KEYS=1
 readonly GPG_KEY_FINGERPRINT_LENGTH=40
 readonly GPG_KEY_LISTING_PUBLIC_KEY_FIELD="pub:"
 readonly GPG_VERSION_IDENTIFIER="gpg (GnuPG)"
@@ -21,7 +21,7 @@ gpg_key_verification() {
   local gpg_key="$(gpg_key_list)"
   local gpg_keys_count="$(gpg_keys_count "$gpg_key")"
 
-  if [ "$gpg_keys_count" -ne "$GPG_KEY_FILE_MAX_KEYS" ]; then
+  if [ "$gpg_keys_count" -ne "$GPG_KEY_IMPORT_FILE_MAX_KEYS" ]; then
     verification_result_error # Malicious key.
   fi
 
