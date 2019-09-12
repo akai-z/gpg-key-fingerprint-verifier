@@ -56,14 +56,14 @@ you have to compare it with the hash provided by this repository ([gpg-key-finge
 
 ```
 gpg-key-fingerprint-verifier \
-  --gpg-key-file=<gpg-key-file> \
+  --gpg-key-import-file=<gpg-key-import-file> \
   --gpg-key-fingerprint=<gpg-key-fingerprint> \
   --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
   [--print-gpg-key-list] \
   [-q|--quiet]
 ```
 
-* `--gpg-key-file`: GPG key import file path.
+* `--gpg-key-import-file`: GPG key import file path.
 
 * `--gpg-key-fingerprint`: A 40 characters, with no spaces, GPG key fingerprint.  
   (Not used/required if `--print-gpg-key-list` is used.)
