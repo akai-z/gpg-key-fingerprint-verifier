@@ -146,13 +146,13 @@ read_args() {
 usage() {
   cat <<Usage
 usage: gpg-key-fingerprint-verifier \\
-         --gpg-key-file=<gpg-key-file> \\
+         --gpg-key-import-file=<gpg-key-import-file> \\
          --gpg-key-fingerprint=<gpg-key-fingerprint> \\
          --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
          [--print-gpg-key-list] \\
          [-q|--quiet]
 
-  --gpg-key-file
+  --gpg-key-import-file
       GPG key import file path.
 
   --gpg-key-fingerprint
