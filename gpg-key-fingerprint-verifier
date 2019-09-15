@@ -150,7 +150,7 @@ usage: gpg-key-fingerprint-verifier \\
          --gpg-key-fingerprint=<gpg-key-fingerprint> \\
          --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
          [--print-gpg-key-list] \\
-         [-q|--quiet]
+         [--quiet|-q]
 
   --gpg-key-import-file
       GPG key import file path.
