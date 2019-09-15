@@ -164,7 +164,7 @@ usage: gpg-key-fingerprint-verifier \\
   --print-gpg-key-list
       Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
 
-  -q, --quiet
+  --quiet, -q
       Suppresses verification success message. (Optional)
 Usage
 
