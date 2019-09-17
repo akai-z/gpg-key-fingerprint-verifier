@@ -137,7 +137,7 @@ read_args() {
       --gpg-key-fingerprint=*)      GPG_KEY_FINGERPRINT="${i#*=}";;
       --gpg-subkey-fingerprint=*)   GPG_SUBKEY_FINGERPRINT="${i#*=}";;
       --print-gpg-key-list)         GPG_KEY_LIST_PRINT=1;;
-      --quiet|-q)                   QUIET=1;;
+      -q|--quiet)                   QUIET=1;;
       *)                            usage;;
     esac
   done
