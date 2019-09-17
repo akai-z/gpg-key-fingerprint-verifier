@@ -66,7 +66,7 @@ gpg-key-fingerprint-verifier \
   --gpg-key-fingerprint=<gpg-key-fingerprint> \
   --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
   [--print-gpg-key-list] \
-  [--quiet|-q]
+  [-q | --quiet]
 ```
 
 * `--gpg-key-import-file`: GPG key import file path.
@@ -79,7 +79,7 @@ gpg-key-fingerprint-verifier \
 
 * `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
 
-* `--quiet, -q`: Suppresses verification success message. (Optional)
+* `-q, --quiet`: Suppresses verification success message. (Optional)
 
 ## Authors
 
