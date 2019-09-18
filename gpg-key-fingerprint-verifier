@@ -51,9 +51,9 @@ gpg_key_list() {
 }
 
 gpg_keys_count() {
-  local gpg_key="$1"
+  local gpg_key_list="$1"
 
-  echo "$gpg_key" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_FIELD}"
+  echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_FIELD}"
 }
 
 gpg_key_fingerprint_find() {
