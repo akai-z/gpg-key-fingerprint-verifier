@@ -81,6 +81,18 @@ gpg-key-fingerprint-verifier \
 
 * `-q, --quiet`: Suppresses verification success message. (Optional)
 
+### Example
+
+This example shows how the verification tool could be used with `apt-key add` command:
+```
+gpg-key-fingerprint-verifier -q \
+  --gpg-key-import-file=GPG-KEY \
+  --gpg-key-fingerprint=GPG-KEY-FINGERPRINT \
+  --gpg-subkey-fingerprint=GPG-SUBKEY-FINGERPRINT \
+
+&& apt-key add GPG-KEY
+```
+
 ## Authors
 
 * [Ammar K.](https://github.com/akai-z)
