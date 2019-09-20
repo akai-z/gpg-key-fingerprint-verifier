@@ -6,6 +6,9 @@ Beside verifying GPG keys with their fingerprints, the tool will also check whet
 contain any malicious keys that are embedded with the actual keys.  
 Where the maximum allowed keys in an import file is `1`.
 
+This could be useful for automation purposes (Like in Docker for example),  
+where GPG keys cannot be manually checked.
+
 ## Requirements
 
 * GnuPG (Version 2 or higher.)
