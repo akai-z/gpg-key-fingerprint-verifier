@@ -89,11 +89,11 @@ gpg-key-fingerprint-verifier \
 This example shows how the verification tool could be used with `apt-key add` command:
 ```
 gpg-key-fingerprint-verifier -q \
-  --gpg-key-import-file=GPG-KEY \
+  --gpg-key-import-file=GPG-KEY-IMPORT-FILE \
   --gpg-key-fingerprint=GPG-KEY-FINGERPRINT \
   --gpg-subkey-fingerprint=GPG-SUBKEY-FINGERPRINT \
 
-&& apt-key add GPG-KEY
+&& apt-key add GPG-KEY-IMPORT-FILE
 ```
 
 Instead of using the AND operator (`&&`), you could use the [Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html) with the exit on error option (`set -e`).
