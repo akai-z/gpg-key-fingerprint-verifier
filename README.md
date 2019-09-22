@@ -96,6 +96,8 @@ gpg-key-fingerprint-verifier -q \
 && apt-key add GPG-KEY
 ```
 
+Instead of using the AND operator (`&&`), you could use the [Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html) with the exit on error option (`set -e`).
+
 ## Authors
 
 * [Ammar K.](https://github.com/akai-z)
