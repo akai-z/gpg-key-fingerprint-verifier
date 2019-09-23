@@ -4,7 +4,7 @@ GnuPG Key Fingerprint Verifier is a shell tool that allows to verify a GPG key b
 
 Beside verifying GPG keys with their fingerprints, the tool will also check whether GPG keys import files  
 contain any malicious keys that are embedded with the actual keys.  
-Where the maximum allowed keys in an import file is `1`.
+Where the number of maximum allowed keys in an import file is `1`.
 
 This could be useful for automation purposes (Like in Docker for example),  
 where GPG keys fingerprints cannot be manually verified.
