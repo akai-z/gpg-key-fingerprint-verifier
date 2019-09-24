@@ -96,7 +96,7 @@ gpg-key-fingerprint-verifier -q \
 && apt-key add GPG-KEY-IMPORT-FILE
 ```
 
-Instead of using the AND operator (`&&`), you could use the [Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html) with the exit on error option (`set -e`).
+The AND operator (`&&`) could be omitted, if the [Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html) is used with the exit on error option (`set -e`).
 
 ## Authors
 
