@@ -80,7 +80,8 @@ gpg-key-fingerprint-verifier \
 * `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
   (Not used/required if `--print-gpg-key-list` is used.)
 
-* `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
+* `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)  
+More details about the format of the machine-parseable GPG key listing could be found [here](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS).
 
 * `-q, --quiet`: Suppresses verification success message. (Optional)
 
