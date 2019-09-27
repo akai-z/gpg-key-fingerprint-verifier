@@ -101,7 +101,7 @@ The AND operator (`&&`) could be omitted, if the [Set Builtin](https://www.gnu.o
 
 ## Authors
 
-* [Ammar K.](https://github.com/akai-z)
+* [Akai](https://github.com/akai-z)
 
 ## License
 
