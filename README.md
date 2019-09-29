@@ -90,11 +90,11 @@ More details about the format of the machine-parseable GPG key listing could be 
 This example shows how the verification tool could be used with `apt-key add` command:
 ```
 gpg-key-fingerprint-verifier -q \
-  --gpg-key-import-file=GPG-KEY-IMPORT-FILE \
-  --gpg-key-fingerprint=GPG-KEY-FINGERPRINT \
-  --gpg-subkey-fingerprint=GPG-SUBKEY-FINGERPRINT \
+  --gpg-key-import-file=<GPG-KEY-IMPORT-FILE> \
+  --gpg-key-fingerprint=<GPG-KEY-FINGERPRINT> \
+  --gpg-subkey-fingerprint=<GPG-SUBKEY-FINGERPRINT> \
 
-&& apt-key add GPG-KEY-IMPORT-FILE
+&& apt-key add <GPG-KEY-IMPORT-FILE>
 ```
 
 The AND operator (`&&`) could be omitted, if the [Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html) is used with the exit on error option (`set -e`).
