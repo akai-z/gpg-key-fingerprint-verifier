@@ -9,6 +9,9 @@ contain any malicious keys that are embedded with the actual keys.
 This could be useful for automation purposes (Like in Docker for example),  
 where GPG keys fingerprints cannot be manually verified.
 
+Piping GPG keys using curl to commands such as `apt-key` is bad.  
+More details about that could be found [here](https://www.tablix.org/~avian/blog/archives/2017/08/on_piping_curl_to_apt_key/).
+
 ## Requirements
 
 * GnuPG (Version 2 or higher.)
