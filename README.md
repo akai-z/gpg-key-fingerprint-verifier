@@ -1,6 +1,6 @@
 # GnuPG Key Fingerprint Verifier
 
-GnuPG Key Fingerprint Verifier is a shell tool that allows to verify a GPG key before importing/adding it.
+GnuPG Key Fingerprint Verifier is a shell tool that allows to verify GPG keys before importing/adding them.
 
 Beside verifying GPG keys with their fingerprints, the tool will also check whether GPG keys import files  
 contain any malicious keys that are embedded with the actual keys.  
