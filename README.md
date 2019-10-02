@@ -92,6 +92,8 @@ More details about the format of the machine-parseable GPG key listing could be 
 
 This example shows how the verification tool could be used with `apt-key add` command:
 ```
+curl -fL -o <gpg-key-import-file> <gpg-key-import-file-url> && \
+
 gpg-key-fingerprint-verifier -q \
   --gpg-key-import-file=<gpg-key-import-file> \
   --gpg-key-fingerprint=<gpg-key-fingerprint> \
