@@ -44,9 +44,10 @@ gpg_key_list() {
   echo "$( \
     gpg -qn \
       --with-colons \
-      --with-subkey-fingerprint \
-      --import-options import-show \
-      --import "$GPG_KEY_IMPORT_FILE" \
+      --with-fingerprint \
+      --with-fingerprint \
+      --fixed-list-mode \
+      "$GPG_KEY_IMPORT_FILE" \
   )"
 }
 
