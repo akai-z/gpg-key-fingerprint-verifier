@@ -75,14 +75,6 @@ gpg_key_list_print() {
   fi
 }
 
-gpg_version() {
-  echo "$( \
-    gpg --version \
-      | grep -0 "^${GPG_VERSION_IDENTIFIER}" \
-      | cut -d " " -f 3 \
-  )"
-}
-
 deps_check() {
   local dep
 
