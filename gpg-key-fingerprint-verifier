@@ -98,14 +98,6 @@ deps_check() {
   done
 }
 
-gpg_version_check() {
-  local gpg_version="$(gpg_major_version)"
-
-  if [ "$gpg_version" -lt "$GPG_REQUIRED_VERSION" ]; then
-    error "Only GPG v2 and higher are supported."
-  fi
-}
-
 args_validation() {
   if [ -z "$GPG_KEY_IMPORT_FILE" ]; then
     error "GPG key import file path is missing."
