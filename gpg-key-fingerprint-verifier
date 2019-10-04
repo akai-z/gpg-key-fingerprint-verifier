@@ -191,7 +191,6 @@ error() {
 
 main() {
   deps_check
-  gpg_version_check
   read_args "$@"
   args_validation
   gpg_home_dir_create
