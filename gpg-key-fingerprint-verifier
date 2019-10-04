@@ -75,10 +75,6 @@ gpg_key_list_print() {
   fi
 }
 
-gpg_major_version() {
-  echo "$(gpg_version | cut -d "." -f 1)"
-}
-
 gpg_version() {
   echo "$( \
     gpg --version \
