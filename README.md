@@ -14,7 +14,7 @@ More details about that could be found [here](https://www.tablix.org/~avian/blog
 
 ## Requirements
 
-* GnuPG (Version 2 or higher.)
+* GnuPG (Legacy versions are supported.)
 
 ## Installation
 
