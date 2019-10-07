@@ -138,8 +138,7 @@ usage: gpg-key-fingerprint-verifier \\
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG key fingerprint. (Not used/required if --print-gpg-key-list is used.)
 
   --gpg-subkey-fingerprint
-      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint.
-      This should be the default subkey in the GPG key listing.
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint. This should be the default subkey in the GPG key listing.
       (Not used/required if --print-gpg-key-list is used.)
 
   --print-gpg-key-list
