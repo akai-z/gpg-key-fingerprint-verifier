@@ -81,6 +81,7 @@ gpg-key-fingerprint-verifier \
   (Not used/required if `--print-gpg-key-list` is used.)
 
 * `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
+  This should be the default subkey in the GPG key listing.  
   (Not used/required if `--print-gpg-key-list` is used.)
 
 * `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)  
