@@ -23,10 +23,14 @@ gpg_key_verification() {
     verification_result_error # Malicious key.
   fi
 
-  if [ "${#GPG_KEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ] || \
-    { [ ! -z "$GPG_SUBKEY_FINGERPRINT" ] && [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ]; }
-  then
+  if [ "${#GPG_KEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ]; then
     verification_result_error # Invalid key fingerprint.
+  fi
+
+  if [ ! -z "$GPG_SUBKEY_FINGERPRINT" ] && \
+     [ "${#GPG_SUBKEY_FINGERPRINT}" -ne "$GPG_KEY_FINGERPRINT_LENGTH" ]
+  then
+    verification_result_error # Invalid subkey fingerprint.
   fi
 
   gpg_key_fingerprint_find "$gpg_key_list" "$GPG_KEY_FINGERPRINT" \
