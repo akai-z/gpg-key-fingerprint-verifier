@@ -96,10 +96,6 @@ args_validation() {
   if [ -z "$GPG_KEY_FINGERPRINT" ]; then
     error "GPG key fingerprint is missing."
   fi
-
-  if [ -z "$GPG_SUBKEY_FINGERPRINT" ]; then
-    error "GPG subkey fingerprint is missing."
-  fi
 }
 
 read_args() {
