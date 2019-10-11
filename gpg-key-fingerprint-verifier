@@ -4,7 +4,7 @@ set -e
 
 readonly GPG_KEY_IMPORT_FILE_MAX_KEYS=1
 readonly GPG_KEY_FINGERPRINT_LENGTH=40
-readonly GPG_KEY_LISTING_PUBLIC_KEY_FIELD="pub:"
+readonly GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE="pub:"
 readonly REQUIRED_DEPS="
 gpg
 "
@@ -58,7 +58,7 @@ gpg_key_list() {
 gpg_keys_count() {
   local gpg_key_list="$1"
 
-  echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_FIELD}"
+  echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE}"
 }
 
 gpg_key_fingerprint_find() {
