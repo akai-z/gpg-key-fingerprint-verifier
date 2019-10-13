@@ -61,6 +61,13 @@ gpg_keys_count() {
   echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE}"
 }
 
+gpg_key_list_record_number() {
+  local gpg_key_list="$1"
+  local record_type="$2"
+
+  echo "$gpg_key_list" | grep -on "^${record_type}"
+}
+
 gpg_key_fingerprint_find() {
   local gpg_key_list="$1"
   local fingerprint="$2"
