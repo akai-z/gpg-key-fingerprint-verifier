@@ -76,6 +76,17 @@ gpg_key_fingerprint_find() {
   echo "$gpg_key_list" | grep -q ":${fingerprint}:"
 }
 
+gpg_key_fingerprint_find_by_line_number() {
+  local gpg_key_list="$1"
+  local fingerprint="$2"
+  local line_number="$3"
+
+  echo "$gpg_key_list" \
+    | head -"$line_number" \
+    | tail -1 \
+    | grep -q ":${fingerprint}:"
+}
+
 gpg_home_dir_create() {
   gpg -k > /dev/null 2>&1
 }
