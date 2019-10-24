@@ -69,6 +69,12 @@ gpg_key_list_record_number() {
   echo "$gpg_key_list" | grep -on "^${record_type}:" | cut -d ':' -f 1
 }
 
+gpg_key_list_fingerprint_record_number() {
+  local key_record_number="$1"
+
+  expr $key_record_number + 1
+}
+
 gpg_key_fingerprint_find() {
   local gpg_key_list="$1"
   local fingerprint="$2"
