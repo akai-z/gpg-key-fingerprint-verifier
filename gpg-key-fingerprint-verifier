@@ -92,7 +92,7 @@ gpg_key_fingerprint_find_by_line_number() {
   echo "$gpg_key_list" \
     | head -"$line_number" \
     | tail -1 \
-    | grep -q ":${fingerprint}:"
+    | grep -q -E "^${GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE}:.*:${fingerprint}:"
 }
 
 gpg_home_dir_create() {
