@@ -80,7 +80,8 @@ gpg_key_fingerprint_find() {
   local gpg_key_list="$1"
   local fingerprint="$2"
 
-  echo "$gpg_key_list" | grep -q ":${fingerprint}:"
+  echo "$gpg_key_list" \
+    | grep -q -E "^${GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE}:.*:${fingerprint}:"
 }
 
 gpg_key_fingerprint_find_by_line_number() {
