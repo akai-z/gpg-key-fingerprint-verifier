@@ -60,7 +60,7 @@ gpg_key_list() {
 gpg_keys_count() {
   local gpg_key_list="$1"
 
-  echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE}"
+  echo "$gpg_key_list" | grep -c "^${GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE}:"
 }
 
 gpg_key_list_record_number() {
