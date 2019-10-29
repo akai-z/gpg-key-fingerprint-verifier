@@ -165,7 +165,7 @@ usage: gpg-key-fingerprint-verifier \\
       GPG key import file path.
 
   --gpg-key-fingerprint
-      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG key fingerprint. (Not used/required if --print-gpg-key-list is used.)
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG public key fingerprint. (Not used/required if --print-gpg-key-list is used.)
 
   --gpg-subkey-fingerprint
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint. (Not used if --print-gpg-key-list is used.)
