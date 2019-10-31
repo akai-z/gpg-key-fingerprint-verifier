@@ -128,7 +128,7 @@ args_validation() {
   fi
 
   if [ -z "$GPG_PUBLIC_KEY_FINGERPRINT" ]; then
-    error "GPG key fingerprint is missing."
+    error "GPG public key fingerprint is missing."
   fi
 }
 
