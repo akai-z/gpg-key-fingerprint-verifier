@@ -156,7 +156,7 @@ usage() {
   cat <<Usage
 usage: gpg-key-fingerprint-verifier \\
          --gpg-key-import-file=<gpg-key-import-file> \\
-         --gpg-key-fingerprint=<gpg-key-fingerprint> \\
+         --gpg-public-key-fingerprint=<gpg-public-key-fingerprint> \\
          --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
          [--print-gpg-key-list] \\
          [-q | --quiet]
@@ -164,7 +164,7 @@ usage: gpg-key-fingerprint-verifier \\
   --gpg-key-import-file
       GPG key import file path.
 
-  --gpg-key-fingerprint
+  --gpg-public-key-fingerprint
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG public key fingerprint. (Not used/required if --print-gpg-key-list is used.)
 
   --gpg-subkey-fingerprint
