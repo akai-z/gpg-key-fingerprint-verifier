@@ -71,9 +71,9 @@ gpg_key_list_record_line_numbers() {
 }
 
 gpg_key_list_fingerprint_record_line_number() {
-  local key_record_number="$1"
+  local record_line_number="$1"
 
-  expr $key_record_number + 1
+  expr $record_line_number + 1
 }
 
 gpg_key_fingerprint_find() {
