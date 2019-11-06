@@ -88,13 +88,13 @@ gpg_key_fingerprint_find() {
 gpg_key_fingerprint_find_by_line_number() {
   local gpg_key_list="$1"
   local fingerprint="$2"
-  local line_number="$(gpg_key_list_fingerprint_record_line_number "$3")"
-  local record_type="$GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE"
+  local fingerprint_record_line_number="$(gpg_key_list_fingerprint_record_line_number "$3")"
+  local fingerprint_record_type="$GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE"
 
   echo "$gpg_key_list" \
-    | head -"$line_number" \
+    | head -"$fingerprint_record_line_number" \
     | tail -1 \
-    | grep -q -E "^${record_type}:.*:${fingerprint}:"
+    | grep -q -E "^${fingerprint_record_type}:.*:${fingerprint}:"
 }
 
 gpg_home_dir_create() {
