@@ -88,13 +88,37 @@ gpg_key_fingerprint_find() {
 gpg_key_fingerprint_find_by_line_number() {
   local gpg_key_list="$1"
   local fingerprint="$2"
-  local fingerprint_record_line_number="$(gpg_key_list_fingerprint_record_line_number "$3")"
+  local key_record_type="$3"
   local fingerprint_record_type="$GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE"
+  local key_records_line_numbers
+  local key_record_line_number
+  local fingerprint_record_line_number
+  local result
 
-  echo "$gpg_key_list" \
-    | head -"$fingerprint_record_line_number" \
-    | tail -1 \
-    | grep -q -E "^${fingerprint_record_type}:.*:${fingerprint}:"
+  key_records_line_numbers="$( \
+    gpg_key_list_record_line_numbers "$gpg_key_list" "$key_record_type" \
+  )"
+
+  for key_record_line_number in $key_records_line_numbers
+  do
+    fingerprint_record_line_number="$( \
+      gpg_key_list_fingerprint_record_line_number "$key_record_line_number" \
+    )"
+
+    result="$( \
+      echo "$gpg_key_list" \
+        | head -"$fingerprint_record_line_number" \
+        | tail -1 \
+        | grep -E "^${fingerprint_record_type}:.*:${fingerprint}:" \
+        || echo "1" \
+    )"
+
+    if [ "$result" != "1" ]; then
+      return 0
+    fi
+  done
+
+  return 1
 }
 
 gpg_home_dir_create() {
