@@ -78,15 +78,6 @@ gpg_key_list_fingerprint_record_line_number() {
   expr $fingerprint_record_line_number + 1
 }
 
-gpg_key_fingerprint_find() {
-  local gpg_key_list="$1"
-  local fingerprint="$2"
-  local fingerprint_record_type="$GPG_KEY_LISTING_FINGERPRINT_RECORD_TYPE"
-
-  echo "$gpg_key_list" \
-    | grep -q -E "^${fingerprint_record_type}:.*:${fingerprint}:"
-}
-
 gpg_key_fingerprint_find_by_line_number() {
   local gpg_key_list="$1"
   local fingerprint="$2"
