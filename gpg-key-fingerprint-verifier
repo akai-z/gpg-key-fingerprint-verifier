@@ -35,12 +35,12 @@ gpg_key_verification() {
     verification_result_error # Invalid subkey fingerprint.
   fi
 
-  gpg_key_fingerprint_find_by_line_number "$gpg_key_list" "$GPG_PUBLIC_KEY_FINGERPRINT" \
+  gpg_key_fingerprint_find "$gpg_key_list" "$GPG_PUBLIC_KEY_FINGERPRINT" \
     "$GPG_KEY_LISTING_PUBLIC_KEY_RECORD_TYPE" \
     || verification_result_error # Wrong/Malicious key.
 
   if [ ! -z "$GPG_SUBKEY_FINGERPRINT" ]; then
-    gpg_key_fingerprint_find_by_line_number "$gpg_key_list" "$GPG_SUBKEY_FINGERPRINT" \
+    gpg_key_fingerprint_find "$gpg_key_list" "$GPG_SUBKEY_FINGERPRINT" \
       "$GPG_KEY_LISTING_SUBKEY_RECORD_TYPE" \
       || verification_result_error # Wrong/Malicious key.
   fi
@@ -78,7 +78,7 @@ gpg_key_list_fingerprint_record_line_number() {
   expr $fingerprint_record_line_number + 1
 }
 
-gpg_key_fingerprint_find_by_line_number() {
+gpg_key_fingerprint_find() {
   local gpg_key_list="$1"
   local fingerprint="$2"
   local key_record_type="$3"
