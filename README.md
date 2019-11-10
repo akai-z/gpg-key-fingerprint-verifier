@@ -81,7 +81,7 @@ gpg-key-fingerprint-verifier \
   (Not used/required if `--print-gpg-key-list` is used.)
 
 * `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
-  This should be the default subkey (with record type [`sub`](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS)) in the GPG key listing.  
+  This should be the default subkey (with record type [`sub`](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS)) in the GPG key listing.  (But other subkeys could be used.)  
   Verifying GPG subkey fingerprint is optional, but recommended.  
   (Not used if `--print-gpg-key-list` is used.)
 
