@@ -183,10 +183,10 @@ usage: gpg-key-fingerprint-verifier \\
       GPG key import file path.
 
   --gpg-public-key-fingerprint
-      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG public key fingerprint. (This will be ignored if --print-gpg-key-list is used.)
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, without spaces, GPG public key fingerprint. (This will be ignored if --print-gpg-key-list is used.)
 
   --gpg-subkey-fingerprint
-      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, with no spaces, GPG subkey fingerprint. (This will be ignored if --print-gpg-key-list is used.)
+      A ${GPG_KEY_FINGERPRINT_LENGTH} characters, without spaces, GPG subkey fingerprint. (This will be ignored if --print-gpg-key-list is used.)
       This should be the default subkey (with record type "sub") in the GPG key listing. (But other subkeys could be used.)
       Verifying GPG subkey fingerprint is optional, but recommended.
 
