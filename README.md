@@ -77,10 +77,10 @@ gpg-key-fingerprint-verifier \
 
 * `--gpg-key-import-file`: GPG key import file path.
 
-* `--gpg-public-key-fingerprint`: A 40 characters, with no spaces, GPG public key fingerprint.  
+* `--gpg-public-key-fingerprint`: A 40 characters, without spaces, GPG public key fingerprint.  
   (This will be ignored if `--print-gpg-key-list` is used.)
 
-* `--gpg-subkey-fingerprint`: A 40 characters, with no spaces, GPG subkey fingerprint.  
+* `--gpg-subkey-fingerprint`: A 40 characters, without spaces, GPG subkey fingerprint.  
   This should be the default subkey (with record type [`sub`](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS)) in the GPG key listing.  (But other subkeys could be used.)  
   Verifying GPG subkey fingerprint is optional, but recommended.  
   (This will be ignored if `--print-gpg-key-list` is used.)
