@@ -43,26 +43,15 @@ sudo mv gpg-key-fingerprint-verifier /usr/local/bin/
 
 ## File Integrity Verification
 
-To verify file (gpg-key-fingerprint-verifier) integrity, you will need a tool that can calculate `SHA-3-512` hash.
+To verify file `gpg-key-fingerprint-verifier` integrity, the `SHA-256` hash value of the file must be computed.
 
-Here are some tools that provide that:  
-* OpenSSL:
+This can be done by using the command [sha256sum](https://www.gnu.org/software/coreutils/manual/html_node/sha2-utilities#sha2-utilities):
 ```
-openssl dgst -sha3-512 gpg-key-fingerprint-verifier
-```
-
-* [RHash](https://github.com/rhash/RHash):
-```
-rhash --sha3-512 gpg-key-fingerprint-verifier
+sha256sum gpg-key-fingerprint-verifier
 ```
 
-* [sha3sum](https://github.com/maandree/sha3sum):
-```
-sha3-512sum -l gpg-key-fingerprint-verifier
-```
-
-Once the hash of the current state of the file is calculated,  
-you have to compare it with the hash provided by this repository ([gpg-key-fingerprint-verifier.sha3-512](https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier.sha3-512)).
+Once the hash value of the current state of the file is computed,  
+it should be compared with the one provided by this repository ([gpg-key-fingerprint-verifier.sha-256](https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier.sha-256)).
 
 ## Usage
 
