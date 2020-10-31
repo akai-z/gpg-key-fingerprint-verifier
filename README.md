@@ -53,7 +53,7 @@ sha256sum gpg-key-fingerprint-verifier
 ```
 
 Once the hash value of the current state of the file is computed,  
-it should be compared with the one included in this repository ([gpg-key-fingerprint-verifier.sha256](https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier.sha256)).
+it should be compared with the one included in this repository ([gpg-key-fingerprint-verifier.sha2](https://raw.githubusercontent.com/akai-z/gpg-key-fingerprint-verifier/master/gpg-key-fingerprint-verifier.sha2)).
 
 ## Usage
 
