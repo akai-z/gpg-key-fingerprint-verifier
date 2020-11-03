@@ -4,14 +4,14 @@ GnuPG Key Fingerprint Verifier is a shell tool that allows to run simple verific
 on GPG keys to decide whether they are safe to import/add.
 
 Beside verifying GPG keys with their fingerprints, the tool will also check whether GPG keys import files  
-contain any malicious keys that are embedded with the actual keys.  
+contain any possible malicious keys that are embedded with the actual keys.  
 (Where the number of maximum allowed public keys in an import file is `1`.)
 
 This could be useful for automation purposes (Like in Docker for example),  
 where GPG keys fingerprints cannot be manually verified.
 
-Piping GPG keys using curl to commands such as `apt-key` is bad.  
-More details about that could be found [here](https://www.tablix.org/~avian/blog/archives/2017/08/on_piping_curl_to_apt_key/).
+Piping GPG keys using curl to commands such as `apt-key` can be [harmful](https://www.tablix.org/~avian/blog/archives/2017/08/on_piping_curl_to_apt_key/).  
+And the goal of this verification tool is to raise awareness about that habit.
 
 ## Requirements
 
