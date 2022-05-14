@@ -161,12 +161,36 @@ read_args() {
   do
     case $i in
       --gpg-key-import-file=*)          GPG_KEY_IMPORT_FILE="${i#*=}";;
-      --gpg-public-key-fingerprint=*)   GPG_PUBLIC_KEY_FINGERPRINT="${i#*=}";;
-      --gpg-subkey-fingerprint=*)       GPG_SUBKEY_FINGERPRINT="${i#*=}";;
       --print-gpg-key-list)             GPG_KEY_LIST_PRINT=1;;
+      --gpg-public-key-fingerprint=*)   GPG_PUBLIC_KEY_FINGERPRINT="${i#*=}";;
+      --gpg-public-key-fingerprint)     read_gpg_public_key_fingerprint;;
+      --gpg-subkey-fingerprint=*)       GPG_SUBKEY_FINGERPRINT="${i#*=}";;
+      --gpg-subkey-fingerprint)         read_gpg_subkey_fingerprint;;
       -q|--quiet)                       QUIET=1;;
       *)                                usage;;
     esac
+  done
+}
+
+read_gpg_public_key_fingerprint() {
+  if [ "$GPG_KEY_LIST_PRINT" -eq 1 ]; then
+    return 0
+  fi
+
+  while [ -z "$GPG_PUBLIC_KEY_FINGERPRINT" ]; do
+    read -s -p "Enter GPG Public Key Fingerprint: " GPG_PUBLIC_KEY_FINGERPRINT
+    printf "\n"
+  done
+}
+
+read_gpg_subkey_fingerprint() {
+  if [ "$GPG_KEY_LIST_PRINT" -eq 1 ]; then
+    return 0
+  fi
+
+  while [ -z "$GPG_SUBKEY_FINGERPRINT" ]; do
+    read -s -p "Enter GPG Subkey Fingerprint: " GPG_SUBKEY_FINGERPRINT
+    printf "\n"
   done
 }
 
