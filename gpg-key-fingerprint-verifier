@@ -198,8 +198,8 @@ usage() {
   cat <<Usage
 usage: gpg-key-fingerprint-verifier \\
          --gpg-key-import-file=<gpg-key-import-file> \\
-         --gpg-public-key-fingerprint=<gpg-public-key-fingerprint> \\
-         --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
+         --gpg-public-key-fingerprint Or --gpg-public-key-fingerprint=<gpg-public-key-fingerprint> \\
+         --gpg-subkey-fingerprint Or --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \\
          [--print-gpg-key-list] \\
          [-q | --quiet]
 
@@ -208,11 +208,15 @@ usage: gpg-key-fingerprint-verifier \\
 
   --gpg-public-key-fingerprint
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, without spaces, GPG public key fingerprint. (This will be ignored if --print-gpg-key-list is used.)
+      The fingerprint can be prompted for user input in a shell if it's a flag (--gpg-public-key-fingerprint) without a value.
+      Or it can be provided through the command as an argument with a value (--gpg-public-key-fingerprint=<gpg-public-key-fingerprint>).
 
   --gpg-subkey-fingerprint
       A ${GPG_KEY_FINGERPRINT_LENGTH} characters, without spaces, GPG subkey fingerprint. (This will be ignored if --print-gpg-key-list is used.)
       This should be the default subkey (with record type "sub") in the GPG key listing. (But other subkeys could be used.)
       Verifying GPG subkey fingerprint is optional, but recommended.
+      The fingerprint can be prompted for user input in a shell if it's a flag (--gpg-subkey-fingerprint) without a value.
+      Or it can be provided through the command as an argument with a value (--gpg-subkey-fingerprint=<gpg-subkey-fingerprint>).
 
   --print-gpg-key-list
       Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)
