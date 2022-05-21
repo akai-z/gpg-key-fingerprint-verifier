@@ -93,8 +93,8 @@ curl -fL -o <gpg-key-import-file> <gpg-key-import-file-url> && \
 
 gpg-key-fingerprint-verifier -q \
   --gpg-key-import-file=<gpg-key-import-file> \
-  --gpg-public-key-fingerprint=<gpg-public-key-fingerprint> \
-  --gpg-subkey-fingerprint=<gpg-subkey-fingerprint> \
+  --gpg-public-key-fingerprint \
+  --gpg-subkey-fingerprint \
 
 && apt-key add <gpg-key-import-file>
 ```
