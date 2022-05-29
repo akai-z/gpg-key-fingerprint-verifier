@@ -77,8 +77,8 @@ gpg-key-fingerprint-verifier \
   This should be the default subkey (with record type [`sub`](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS)) in the GPG key listing.  (But other subkeys could be used.)  
   Verifying GPG subkey fingerprint is optional, but recommended.  
   (This will be ignored if `--print-gpg-key-list` is used.)  
-  The fingerprint can be prompted for user input in a shell if it's a flag (--gpg-subkey-fingerprint) without a value.  
-  Or it can be provided through the command as an argument with a value (--gpg-subkey-fingerprint=<gpg-subkey-fingerprint>).
+  The fingerprint can be prompted for user input in a shell if it's a flag (`--gpg-subkey-fingerprint`) without a value.  
+  Or it can be provided through the command as an argument with a value (`--gpg-subkey-fingerprint=<gpg-subkey-fingerprint>`).
 
 * `--print-gpg-key-list`: Prints machine-parseable GPG key listing of the provided GPG key import file. (Optional)  
 More details about the format of the machine-parseable GPG key listing could be found [here](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob_plain;f=doc/DETAILS).
